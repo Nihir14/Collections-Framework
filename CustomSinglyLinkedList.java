@@ -113,4 +113,31 @@ public class CustomSinglyLinkedList {
         node.next = insertAtPositionRecursively(node.next, value, position - 1);
         return node;
     }
+
+    public void reverse() {
+        Node previous = null;
+        Node current = first;
+        Node next = null;
+        last = first;
+        while (current != null) {
+            next = current.next;
+            current.next = previous;
+            previous = current;
+            current = next;
+        }
+        first = previous;
+    }
+
+    public void reverseRecursively() {
+        first = reverseRecursivelyHelper(first, null);
+    }
+
+    private Node reverseRecursivelyHelper(Node current, Node previous) {
+        if (current == null) {
+            return previous;
+        }
+        Node next = current.next;
+        current.next = previous;
+        return reverseRecursivelyHelper(next, current);
+    }
 }
