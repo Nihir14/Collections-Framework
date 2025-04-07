@@ -78,4 +78,18 @@ public class CustomDoublyLinkedList {
         size--;
         return true;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        Node current = first;
+        while (current != null) {
+            sb.append(current.value);
+            if (current.next != null) {
+                sb.append(" <-> ");
+            }
+            current = current.next;
+        }
+        return sb.toString();
+    }
 }
