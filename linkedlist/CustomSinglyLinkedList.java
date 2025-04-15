@@ -1,3 +1,5 @@
+package linkedlist;
+
 public class CustomSinglyLinkedList {
 
     private int size;

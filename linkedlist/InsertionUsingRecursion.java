@@ -1,3 +1,5 @@
+package linkedlist;
+
 public class InsertionUsingRecursion {
     public static void main(String[] args) {
         CustomSinglyLinkedList list = new CustomSinglyLinkedList();

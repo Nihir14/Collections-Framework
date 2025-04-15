@@ -1,3 +1,5 @@
+package linkedlist;
+
 public class DoublyLinkedListImplementation {
     public static void main(String[] args) {
         CustomDoublyLinkedList list = new CustomDoublyLinkedList();

@@ -1,3 +1,5 @@
+package linkedlist;
+
 public class CustomDoublyLinkedList {
 
     private int size;
