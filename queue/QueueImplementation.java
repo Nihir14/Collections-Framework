@@ -7,6 +7,7 @@ public class QueueImplementation {
     public static void main(String[] args) {
         Queue<Integer> que = new LinkedList<>();
 
+
         // Enqueue elements into the queue
         que.add(1);
         que.add(2);
