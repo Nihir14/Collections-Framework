@@ -1,13 +1,47 @@
 package solvingProblemsOfArray;
 
+/**
+ * Test_01_NihirCollection demonstrates and validates
+ * the functionality of the {@link NihirCollection} class.
+ *
+ * <p>
+ * This test class covers:
+ * <ul>
+ *   <li>Capacity and size checks</li>
+ *   <li>Adding different data types</li>
+ *   <li>Handling null values</li>
+ *   <li>Search operations (contains, indexOf, lastIndexOf)</li>
+ *   <li>Get, remove, add at index, and set operations</li>
+ * </ul>
+ * </p>
+ *
+ * <p>
+ * This class is intended for learning, debugging,
+ * and understanding the internal working of a custom collection.
+ * </p>
+ *
+ * @author Nihir
+ */
 public class Test_01_NihirCollection {
+
+    /**
+     * Entry point for testing NihirCollection.
+     *
+     * @param args command-line arguments (not used)
+     */
     public static void main(String[] args) {
+
+        // Create collection instance
         NihirCollection nc = new NihirCollection();
 
+        // Initial state
+        System.out.println("---- Initial State ----");
         System.out.println("Capacity : " + nc.capacity());
         System.out.println("Size     : " + nc.size());
         System.out.println(nc);
 
+        // Adding elements of different types
+        System.out.println("\n---- Adding Elements ----");
         nc.add("a");
         nc.add("b");
         nc.add("c");
@@ -22,6 +56,8 @@ public class Test_01_NihirCollection {
         System.out.println("Size     : " + nc.size());
         System.out.println(nc);
 
+        // Trigger capacity expansion
+        System.out.println("\n---- Adding More Elements (Resize) ----");
         nc.add("a");
         nc.add("b");
         nc.add("c");
@@ -31,32 +67,52 @@ public class Test_01_NihirCollection {
         nc.add(null);
         nc.add(new Example(2, 3));
 
-
         System.out.println("Capacity : " + nc.capacity());
         System.out.println("Size     : " + nc.size());
         System.out.println(nc);
 
-        System.out.println(nc.contains("a"));
+        // contains() checks
+        System.out.println("\n---- contains() Checks ----");
+        System.out.println("Contains 'a'          : " + nc.contains("a"));
+        System.out.println("Contains Example(2,3) : " + nc.contains(new Example(2, 3)));
+        System.out.println("Contains null         : " + nc.contains(null));
 
-        System.out.println(nc.contains(new Example(2, 3)));
-        System.out.println(nc.contains(null));
+        // indexOf() checks
+        System.out.println("\n---- indexOf() Checks ----");
+        System.out.println("Index of 'a'    : " + nc.indexOf("a"));
+        System.out.println("Index of null   : " + nc.indexOf(null));
 
-        System.out.println(nc.indexOf("a"));
-        System.out.println(nc.indexOf(null));
+        // lastIndexOf() checks
+        System.out.println("\n---- lastIndexOf() Checks ----");
+        System.out.println("Last index of 'a'   : " + nc.lastIndexOf("a"));
+        System.out.println("Last index of null  : " + nc.lastIndexOf(null));
+        System.out.println("Last index of 'Yes' : " + nc.lastIndexOf("Yes"));
 
-        System.out.println(nc.lastIndexOf("a"));
-        System.out.println(nc.lastIndexOf(null));
-        System.out.println(nc.lastIndexOf("Yes"));
+        // get() checks
+        System.out.println("\n---- get() Checks ----");
+        System.out.println("Element at index 0 : " + nc.get(0));
+        System.out.println("Element at index 5 : " + nc.get(5));
+        // nc.get(20); // IndexOutOfBoundsException
 
-        System.out.println(nc.get(0));
-        System.out.println(nc.get(5));
-//        System.out.println(nc.get(20)); IndexOutOfBoundException
+        // remove() checks
+        System.out.println("\n---- remove() Checks ----");
+        System.out.println("Removed index 3 : " + nc.remove(3));
+        System.out.println("Removed null    : " + nc.remove(null));
+        System.out.println("Removed null    : " + nc.remove(null));
+        System.out.println("Removed null    : " + nc.remove(null));
+        System.out.println("Removed null    : " + nc.remove(null));
 
-        System.out.println(nc.remove(3));
-        System.out.println(nc.remove(null));
-        System.out.println(nc.remove(null));
-        System.out.println(nc.remove(null));
-        System.out.println(nc.remove(null));
+        System.out.println("\nCollection after removals:");
+        System.out.println(nc);
 
+        // add at index
+        System.out.println("\n---- add(index, element) ----");
+        nc.add(2, null);
+        System.out.println(nc);
+
+        // set() check
+        System.out.println("\n---- set(index, element) ----");
+        System.out.println("Old value at index 2 : " + nc.set(2, 87));
+        System.out.println(nc);
     }
 }
