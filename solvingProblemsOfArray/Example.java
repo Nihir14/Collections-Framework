@@ -2,7 +2,7 @@ package solvingProblemsOfArray;
 
 /**
  * Example is a simple data class used to test
- * object comparison and storage inside {@link NihirCollection}.
+ * object comparison and storage inside {@link NihirCollections}.
  *
  * <p>
  * It demonstrates how overriding {@code equals()} affects

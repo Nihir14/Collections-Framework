@@ -2,7 +2,7 @@ package solvingProblemsOfArray;
 
 /**
  * Test_01_NihirCollection demonstrates and validates
- * the functionality of the {@link NihirCollection} class.
+ * the functionality of the {@link NihirCollections} class.
  *
  * <p>
  * This test class covers:
@@ -22,7 +22,7 @@ package solvingProblemsOfArray;
  *
  * @author Nihir
  */
-public class Test_01_NihirCollection {
+public class Test_01_NihirCollections {
 
     /**
      * Entry point for testing NihirCollection.
@@ -32,7 +32,7 @@ public class Test_01_NihirCollection {
     public static void main(String[] args) {
 
         // Create collection instance
-        NihirCollection nc = new NihirCollection();
+        NihirCollections nc = new NihirCollections();
 
         // Initial state
         System.out.println("---- Initial State ----");

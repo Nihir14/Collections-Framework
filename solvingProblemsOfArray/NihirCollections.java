@@ -16,7 +16,7 @@ package solvingProblemsOfArray;
  *
  * @author Nihir
  */
-public class NihirCollection {
+public class NihirCollections {
 
     /**
      * Internal array used to store elements.
@@ -31,7 +31,7 @@ public class NihirCollection {
     /**
      * Constructs an empty collection with an initial capacity of 10.
      */
-    public NihirCollection() {
+    public NihirCollections() {
         elementData = new Object[10];
     }
 
@@ -58,7 +58,7 @@ public class NihirCollection {
      * by doubling its current size.
      */
     private void increaseCapacity() {
-        Object[] newElementData = new Object[elementCount * 2];
+        Object[] newElementData = new Object[capacity() * 2];
 
         if (elementCount >= 0) {
             System.arraycopy(elementData, 0, newElementData, 0, elementCount);
