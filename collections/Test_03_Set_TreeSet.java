@@ -38,6 +38,7 @@ public class Test_03_Set_TreeSet {
         ts.add(4);
         ts.add(2);
         ts.add(3);
+//        ts.add("a");
         System.out.println(ts); // ascending
 
         TreeSet<String> ts2 = new TreeSet<>();
