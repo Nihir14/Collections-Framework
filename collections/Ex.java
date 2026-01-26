@@ -55,17 +55,17 @@ public class Ex {
      * TreeSet only uses Comparator / Comparable.
      * </p>
      */
-    @Override
-    public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass()) return false;
-        Ex e = (Ex) o;
-        return this.x == e.x && this.y == e.y;
-    }
+//    @Override
+//    public boolean equals(Object o) {
+//        if (o == null || getClass() != o.getClass()) return false;
+//        Ex e = (Ex) o;
+//        return this.x == e.x && this.y == e.y;
+//    }
 
-    @Override
-    public int hashCode() {
-        return x + y;
-    }
+//    @Override
+//    public int hashCode() {
+//        return x + y;
+//    }
 
     @Override
     public String toString() {
